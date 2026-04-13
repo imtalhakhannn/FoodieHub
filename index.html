@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -603,7 +604,7 @@ input { font-family: inherit; }
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="home">
   <h1>Discover &amp; Order<br><span class="highlight">Food You Love</span></h1>
   <p>Premium restaurants at your fingertips. Fresh ingredients, fast delivery, unforgettable flavors.</p>
   <div class="search-wrap">
@@ -658,6 +659,29 @@ input { font-family: inherit; }
   <div class="cart-items" id="cartItems"></div>
   <div class="cart-footer" id="cartFooter"></div>
 </div>
+
+<!-- ABOUT -->
+<section id="about" style="padding:80px 24px;max-width:900px;margin:0 auto">
+  <h2 style="font-size:2rem;font-weight:800;text-align:center;margin-bottom:12px;color:#fff">About <span style="background:linear-gradient(135deg,#FF4D4D,#FF8C42);-webkit-background-clip:text;-webkit-text-fill-color:transparent">FoodieHub</span></h2>
+  <p style="text-align:center;color:#888;font-size:1.05rem;max-width:600px;margin:0 auto 40px;line-height:1.7">We connect food lovers with the best local restaurants. Fresh ingredients, fast delivery, and an unforgettable dining experience - all from the comfort of your home.</p>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px;text-align:center">
+      <div style="font-size:2.5rem;margin-bottom:12px">🚀</div>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#fff">Fast Delivery</h3>
+      <p style="font-size:.85rem;color:#888;line-height:1.5">Average delivery time under 30 minutes to your doorstep</p>
+    </div>
+    <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px;text-align:center">
+      <div style="font-size:2.5rem;margin-bottom:12px">⭐</div>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#fff">Top Rated</h3>
+      <p style="font-size:.85rem;color:#888;line-height:1.5">Only partner with restaurants rated 4.5+ stars</p>
+    </div>
+    <div style="background:#1a1a1a;border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px;text-align:center">
+      <div style="font-size:2.5rem;margin-bottom:12px">💰</div>
+      <h3 style="font-size:1rem;font-weight:700;margin-bottom:8px;color:#fff">Best Prices</h3>
+      <p style="font-size:.85rem;color:#888;line-height:1.5">No hidden fees, transparent pricing on every order</p>
+    </div>
+  </div>
+</section>
 
 <script>
 /* ===== DATA ===== */
