@@ -601,13 +601,13 @@ footer span { color: #EF4444; font-weight: 600; }
     <input type="text" id="searchInput" placeholder="Find restaurants near you..." autocomplete="off">
   </div>
   <div class="categories" id="categoryBar">
-    <button class="cat-pill active" data-cat="all">&#127869; All</button>
-    <button class="cat-pill" data-cat="Pizza">&#127829; Pizza</button>
-    <button class="cat-pill" data-cat="Burgers">&#127828; Burgers</button>
-    <button class="cat-pill" data-cat="Sushi">&#127843; Sushi</button>
-    <button class="cat-pill" data-cat="Indian">&#127835; Indian</button>
-    <button class="cat-pill" data-cat="Chinese">&#129379; Chinese</button>
-    <button class="cat-pill" data-cat="Desserts">&#127856; Desserts</button>
+    <button class="cat-pill active" onclick="filterCat('all',this)">&#127869; All</button>
+    <button class="cat-pill" onclick="filterCat('Pizza',this)">&#127829; Pizza</button>
+    <button class="cat-pill" onclick="filterCat('Burgers',this)">&#127828; Burgers</button>
+    <button class="cat-pill" onclick="filterCat('Sushi',this)">&#127843; Sushi</button>
+    <button class="cat-pill" onclick="filterCat('Indian',this)">&#127835; Indian</button>
+    <button class="cat-pill" onclick="filterCat('Chinese',this)">&#129379; Chinese</button>
+    <button class="cat-pill" onclick="filterCat('Desserts',this)">&#127856; Desserts</button>
   </div>
 </section>
 
@@ -967,14 +967,12 @@ searchInput.addEventListener('input', e => {
 });
 
 // ===== CATEGORIES =====
-categoryBar.addEventListener('click', e => {
-  const pill = e.target.closest('.cat-pill');
-  if (!pill) return;
-  categoryBar.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
-  pill.classList.add('active');
-  activeCategory = pill.dataset.cat;
+function filterCat(cat, btn) {
+  document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  activeCategory = cat;
   renderRestaurants();
-});
+}
 
 // ===== KEYBOARD =====
 document.addEventListener('keydown', e => {
